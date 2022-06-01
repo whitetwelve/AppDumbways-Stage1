@@ -1,0 +1,223 @@
+<html>
+
+    {{> header}}
+  {{> navbar }}
+
+
+
+<body>
+
+</head>
+<body style="background-color:white">
+          {{#if messages.success}}
+    <div class="alert alert-success" role="alert" >
+        {{messages.success}}
+        </div>
+          {{/if}}
+
+    
+</body>
+</html>
+
+        <div class="title" style="text-align: center;">
+        <h1 id="supbro"><strong>{{title}}</strong></h1><br><br>
+        <div class="container">
+            <!-- Blog list -->
+            <div id="contents" class="project-list">
+               
+                <div class="my-project">
+                    <div class="card shadow-lg mb-4" style="width: 26rem;">
+                        <img class="card-img-top" src="https://media.istockphoto.com/photos/global-connection-picture-id1335295270?s=612x612" alt="Card image cap">
+                        <div class="card-body">
+                     
+                            <h5 class="card-title" ; style=" margin-left: 10px; text-decoration: none;"><a href="detail/1" style="color:black">Dumbways Web App - Woon</a></h5>
+                            <small style="color: rgb(134, 130, 130); font-style : 'italic' ;margin-left: 10px; ">Di posting pada : 23 May 2022 09:25 WIB</small><br>
+                            <small style="color: rgb(134, 130, 130); margin-left: 10px; ">durasi :3 bulan</small>
+                            <br>
+                            <p class="card-text ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium corporis delectus sequi esse dignissimos explicabo voluptatum sunt, perspiciatis soluta impedit? Dignissimos deleniti quo eligendi exercitationem, fugiat laboriosam ab vel aliquam corporis. Tempora architecto veniam iste vero aut deserunt possimus. Quibusdam.
+                            </p>
+            
+                            <div class="logo ">
+                                
+                                <img src="/public/img/node-js-brands.svg" alt="nodeJs">
+                                <img src="/public/img/react-brands.svg" alt="reactJs">
+                          
+                                <img src="/public/img/nextjs.png" alt="nextJs">
+                                <img src="/public/img/typescript.png" alt="typescript">
+                            </div>
+                            <div class="btn ">
+                                &nbsp;&nbsp;<a href="/update/1" class="btn btn-dark " style="width: 170px;" id="edit">Edit</a>
+                                <a href="/delete/ " class="btn btn-dark " style="width: 170px;" id="delete">Delete</a>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        {{#each projects}}
+                         <div class="my-project">
+                    <div class="card shadow-lg mb-4" style="width: 26rem;">
+                        <img class="card-img-top" name= 'upload' src={{this.upload}} alt="Card image cap">
+                        <div class="card-body">
+                     
+                            <h5 class="card-title" ; style=" margin-left: 10px; text-decoration: none;"><a href="/detail-project/{{this.id}}" style="color:black">{{this.projectName}} - {{this.name}}</a></h5>
+                            <small style="color: rgb(134, 130, 130); font-style : 'italic' ;margin-left: 10px; ">Di posting pada :{{this.time}}</small><br>
+                            <small style="color: rgb(134, 130, 130); margin-left: 10px; ">durasi :{{this.duration}}</small>
+                            <br>
+                            <p class="card-text ">{{this.description}}
+                            </p>
+                            {{#each technologies}}
+                            <div class="logo ">
+                                <img src="/public/img/{{this}}">
+                            </div>
+                            {{/each}}
+                            {{#if this.isLogin}}
+                            <div class="btn ">
+                                &nbsp;&nbsp;<a href="/update/{{this.id}}" class="btn btn-dark " style="width: 170px;" id="edit">Edit</a>
+                                <a href="/delete/{{this.id}}" class="btn btn-dark " style="width: 170px;" id="delete" onclick="return confirm('Are you sure want to delete this one?')">Delete</a>
+                            </div>
+                            {{/if}}
+                        </div>
+                        </div>
+                        </div>
+                        {{/each}}
+                        </div>
+              
+                        </div>
+                    </div>
+                        </div>
+              
+                        </div>
+                    </div>
+                {{!-- <script src='/public/js/app.js'></script> --}}
+
+                   <style>
+        .title {
+            background-color: white;
+            padding: 60px 0px;
+            width: 100%;
+        }
+        
+        #contents {
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .my-project .card {
+            border-radius: 20px;
+            margin: 0px 30px;
+        }
+        
+        .my-project .card img {
+            border: none;
+            border-radius: 20px;
+            height: 300px;
+            width: 380px;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+        
+        .my-project .card .card-body {
+            text-align: left;
+        }
+        
+        .my-project .card .card-body button {
+            border-radius: 8px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 10px;
+        }
+        
+        .my-project .card .card-body .logo {
+            display: inline;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        .my-project .card .card-body .logo img {
+            width: 36px;
+            height: 36px;
+            margin-bottom: 20px;
+        }
+        
+        
+        .card .card-body .card-text {
+            text-align: left;
+            line-height: 4vh;
+            margin-left: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        
+        body {
+            background-color: rgb(221, 218, 218);
+        }
+        
+        .button-group {
+            position: relative;
+        }
+        
+        .btn-edit {
+            padding: 5px 10px;
+            border: 0;
+            border-radius: 4px;
+            background: #4a23b6;
+            color: white;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        
+        .btn-post {
+            padding: 5px 10px;
+            border: 0;
+            border-radius: 4px;
+            background: #df280f;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .rounded-pill {
+            margin-left: 800px;
+            height: 37px;
+            width: 100px;
+        }
+        
+        .checkbox label {
+            margin-top: 5px;
+        }
+        
+        .checkbox {
+            margin-left: 450px;
+        }
+        
+        .checkbox input {
+            width: 22px;
+            height: 22px;
+        }
+        
+        .form-check-inline {
+            margin-left: 10;
+        }
+        
+        .row {
+            margin-left: 450px;
+        }
+        
+        form h1 {
+            margin-top: 90px;
+        }
+        
+        body {
+            background-color: rgb(221, 218, 218);
+        }
+        
+        * {
+            font-family: 'Poppins';
+        }
+    </style>
+    {{> footer}}

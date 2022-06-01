@@ -1,0 +1,129 @@
+{{> header}}
+{{> navbar}}
+<div class="content-title">
+    <h1><strong>{{project.projectName}}</strong></h1>  
+</div>
+<div class="container-content">
+    <div class="content-card-top">
+        <div class="project-image">
+            <img src='/uploads/{{project.upload}}'>
+        </div>
+        <div class="project-about">
+            <div class="project-duration">
+                <h2>Duration</h2>
+                <i class="fa-solid fa-calendar-days fa-xl"></i><small>{{project.time}}</small><br>
+                <i class="fa-solid fa-clock fa-xl"></i><small>{{project.duration}}</small>
+            </div>
+            <div class="project-technologies">
+                <h2>Technologies</h2><br>
+                <div class="technology-icons">
+                    {{#each project.technologies}}
+                    <div class="left-icons" style="margin-right:10px ;">
+                        <img src="/public/img/{{this}}" style="width:40px ;">
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-card-buttom">
+        <div class="content-description">
+            <h3 style="font-family: 'Frank Ruhl Libre', serif; font-style:italic">Created by : {{project.name}}</h3>
+            <p>{{project.description}}</p>
+        </div>
+    </div>
+</div>
+<!-- <script src="app.js"></script> -->
+
+<body>
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+        
+        .content-title {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 20vh;
+        }
+        
+        .container-content .content-card-top {
+            display: flex;
+            justify-content: center;
+            margin-left: 40px;
+        }
+        
+        .container-content .content-card-top .project-image {
+            flex: 60%;
+            padding-right: 50px;
+        }
+        
+        .container-content .content-card-top .project-image img {
+            width: 100%;
+            height: 95%;
+        }
+        
+        .container-content .content-card-top .project-about {
+            flex: 40%;
+        }
+        
+        .content-card-top .project-about .project-duration h2 {
+            margin-bottom: 20px;
+        }
+        
+        .content-card-top .project-about .project-duration i {
+            margin-bottom: 40px;
+        }
+        
+        .content-card-top .project-about .project-duration small {
+            color: rgba(6, 0, 0, 0.623);
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        /* CONTENT CARD TOP END */
+        /* CONTENT CARD BUTTOM START */
+        
+        .content-card-buttom .content-description {
+            text-align: justify;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        
+        .content-card-buttom .content-description p {
+            line-height: 30px;
+            word-spacing: 5px;
+        }
+        
+        .project-technologies .technology-icons {
+            display: flex;
+        }
+        
+        .project-technologies .technology-icons .left-icons img {
+            width: 30px;
+            margin-right: 15px;
+            padding-bottom: 15px;
+        }
+        
+        .project-technologies .technology-icons .left-text p {
+            color: rgba(6, 0, 0, 0.623);
+            font-size: 20px;
+            line-height: 20px;
+        }
+        
+        .project-technologies .technology-icons .right-icons img {
+            margin-left: 50px;
+            width: 30px;
+            margin-right: 15px;
+            padding-bottom: 15px;
+        }
+        
+        .project-technologies .technology-icons .right-text p {
+            color: rgba(6, 0, 0, 0.623);
+            font-size: 20px;
+            line-height: 22px;
+        }
+    </style>
+</body>
+
+</html>

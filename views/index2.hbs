@@ -1,0 +1,124 @@
+<html>
+    {{> header}}
+  {{> navbar }}
+<body>
+
+</head>
+<body>
+    
+</body>
+</html>
+
+  {{#if messages.success}}
+    <div class="alert alert-success" role="alert" >
+        {{messages.success}}
+        </div>
+          {{/if}}
+<body>
+    <div class="container">
+        <div class="card shadow-lg rounded-start" style="border-radius:8px">
+            <div class="card-text shadow-lg  mb-1 bg-body" style="margin-right: 70px; height: 75vh; margin-bottom: 29px;">
+                <img src="/public/img/Screenshot (56).png" class="container-flex" style="width: 330px; height: 60vh;" alt="...">
+
+                <h4 class="card-title" style="text-align: center; margin-top :9px"><strong>Rhoma Irama</strong> </h4>
+                <p style="text-align: center;">Fullstack Developer</p>
+            </div>
+            <div class="left-side">
+                <div class="card-body">
+                    <h2 class="card-title"><strong>Hi Welcome to my hut</strong></h2>
+                    <p class="card-text" style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint culpa ab odit sapiente voluptatem repudiandae perferendis, illo quod tempora, natus id atque, reiciendis neque nisi. Ex repellendus voluptatibus omnis dignissimos, voluptates
+                        amet asperiores debitis est corrupti ullam officiis laudantium, odit odio dolorum molestiae magni assumenda voluptatum placeat molestias repellat. Cupiditate esse expedita odit similique iure ex rem, cum laborum blanditiis enim
+                        necessitatibus sunt veniam incidunt earum voluptas mollitia animi nulla.</p>
+                </div>
+                <div class="line2nd">
+                    &nbsp; &nbsp; <button type="button" class="btn btn-dark rounded-pill" style="width: 120px;">&nbsp;contact&nbsp;&nbsp; </button>&nbsp; &nbsp; &nbsp; &nbsp;
+                    <p>download CV&nbsp;<i class="fa fa-download 3x"></i></p>
+                </div>
+                <div class="social">
+                    <img src="/public/img/linkedin-brands.svg" class="rounded-circle" alt="...">&nbsp;&nbsp;&nbsp; &nbsp;
+                    <img src="/public/img/instagram-square-brands.svg" class="rounded-circle" alt="...">&nbsp;&nbsp;&nbsp; &nbsp;
+                    <img src="/public/img/facebook-brands.svg" class="rounded-circle fb" alt="...">&nbsp;&nbsp; &nbsp; &nbsp;
+                    <img src="/public/img/twitter-square-brands.svg" class="rounded-circle" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    {{!-- <script src='/public/js/app.js'></script> --}}
+
+    <style>
+        nav {
+            display: block;
+        }
+        
+        .col .card .card-text {
+            margin-right: 20px;
+        }
+        
+        .col .card-img-top {
+            border-style: solid;
+            border-width: 10px;
+            border-color: white;
+            border-radius: 6px;
+            display: block;
+        }
+        
+        body {
+            background-color: rgb(221, 218, 218);
+        }
+        
+        .social img {
+            width: 30px;
+        }
+        
+        .social .fb {
+            width: 35px;
+        }
+        
+        .social {
+            margin-top: 10px;
+            margin-left: 12px;
+            cursor: pointer;
+        }
+        
+        .line2nd {
+            display: inline-flex;
+            margin-top: 10px;
+        }
+        
+        .line2nd button {
+            height: 6vh;
+        }
+        
+        .line2nd p {
+            margin-top: 5px;
+            font-size: 20px;
+        }
+        
+        .card-title {
+            padding-bottom: 12px;
+        }
+        
+        * {
+            font-family: 'Poppins';
+        }
+        
+        .container .card {
+            height: 90vh;
+            margin: 70px 0px;
+            width: 100%;
+            padding-left: 100px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+        
+        .left-side {
+            display: block;
+            padding-right: 50px;
+            padding-bottom: 20px;
+        }
+    </style>
+</body>
+
+</html>

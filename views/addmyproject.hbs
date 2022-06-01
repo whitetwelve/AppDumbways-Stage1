@@ -1,0 +1,209 @@
+<html>
+    {{> header}}
+  {{> navbar }}
+
+<body>
+ 
+    <div class="content-body">
+        
+        <form action = "/add" method= "POST" enctype='multipart/form-data'>
+
+            <h1 class="fw-bolder text-center">ADD MY PROJECT</h1>
+            <br>
+
+            <div class="row col-4">
+                <label for="pn">Project Name</label>
+                <input type="text" name="name" id="pn" class="form-control shadow-lg mb-5 bg-body" autocomplete="off">
+            </div>
+           
+            <div class="row g-3">
+                <div class="col-3">
+                    <label for="str">Start Date</label>
+                    <input type="date" class="form-control shadow-lg  mb-5 bg-body" id="str" name="startDate">
+                </div>
+                <div class="col-3">
+                    <label for="end">End Date</label>
+                    <input type="date" name="endDate" class="form-control shadow-lg  mb-5 bg-body" id="end">
+                </div>
+            </div>
+            <div class="row col-4">
+                <label for="desc" class="form-label">Description</label>
+                <textarea class="form-control shadow-lg  mb-5 bg-body" name="description" style="resize:none" id="desc" rows="5"></textarea>
+            </div>
+            <div class="checkbox">
+                <p>Technologies</p>
+                <div class="form-check form-check-inline" id="tech">
+                    <input class="form-check-input" name="technologies" type="checkbox" id="node" value='node-js-brands.svg'>
+                    <label class="form-check-label" for="node">Node Js&nbsp;</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="technologies" type="checkbox" id="next" value="nextjs.png">
+                    <label class="form-check-label" for="next">Next Js</label>
+                </div>
+                <br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="technologies" type="checkbox" id="react" value='react-brands.svg'>
+                    <label class="form-check-label" for="react">React Js</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="technologies" type="checkbox" id="type" value="typescript.png">
+                    <label class="form-check-label" for="type">TypeScript</label>
+                </div>
+            </div>
+            <br>
+            <div class="row col-4">
+                <label for="up" class="form-label">Upload Image</label>
+                <input class="form-control shadow-lg  mb-5 bg-body" type="file" id="up" name = "image">
+            </div>
+            <button type="submit" class="btn btn-dark rounded-pill">submit</button>
+           
+    </div>
+
+    </form>
+    </div>
+
+    <br class='new-line'>
+    <br>
+        </div>
+    </div>
+    </div>
+
+    <body>
+        
+ 
+    <style>
+        .title {
+            background-color: white;
+            padding: 60px 0px;
+            width: 100%;
+        }
+        
+        #contents {
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .my-project .card {
+            border-radius: 20px;
+            margin: 0px 30px;
+        }
+        
+        .my-project .card img {
+            border: none;
+            border-radius: 20px;
+            height: 300px;
+            width: 380px;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+        
+        .my-project .card .card-body {
+            text-align: left;
+        }
+        
+        .my-project .card .card-body button {
+            border-radius: 8px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 10px;
+        }
+        
+        .my-project .card .card-body .logo {
+            display: inline;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        .my-project .card .card-body .logo img {
+            width: 36px;
+            height: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .my-project .card .card-body .logo .node-react {
+            padding-left: 10px;
+            padding-right: 5px;
+            padding-top: 10px;
+        }
+        
+        .card .card-body .card-text {
+            text-align: left;
+            line-height: 4vh;
+            margin-left: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        
+        body {
+            background-color: rgb(221, 218, 218);
+        }
+        
+        .button-group {
+            position: relative;
+        }
+        
+        .btn-edit {
+            padding: 5px 10px;
+            border: 0;
+            border-radius: 4px;
+            background: #4a23b6;
+            color: white;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        
+        .btn-post {
+            padding: 5px 10px;
+            border: 0;
+            border-radius: 4px;
+            background: #df280f;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .rounded-pill {
+            margin-left: 800px;
+            height: 37px;
+            width: 100px;
+        }
+        
+        .checkbox label {
+            margin-top: 5px;
+        }
+        
+        .checkbox {
+            margin-left: 450px;
+        }
+        
+        .checkbox input {
+            width: 22px;
+            height: 22px;
+        }
+        
+        .form-check-inline {
+            margin-left: 10;
+        }
+        
+        .row {
+            margin-left: 450px;
+        }
+        
+        form h1 {
+            margin-top: 90px;
+        }
+        
+        body {
+            background-color: rgb(221, 218, 218);
+        }
+        
+        * {
+            font-family: 'Poppins';
+        }
+    </style>
+    {{> footer}}

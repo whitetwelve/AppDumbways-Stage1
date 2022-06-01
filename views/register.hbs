@@ -1,0 +1,67 @@
+{{>header}}
+{{>navbar}}
+
+<body>
+    <form action="/register" method="POST" style="text-align:center">
+        <h3><strong>REGISTER YOUR ACCOUNT</strong> </h3>
+        <br>
+        <div class="col-md-5 ">
+            <label for="nick" class="form-label">Name</label>
+            <input type="text" class="form-control shadow-lg" id="nick" name="name" placeholder="  input your name here .." autocomplete="off">
+        </div>
+        <br>
+        <div class="col-md-5 ">
+            <label for="mail" class="form-label">Email</label>
+            <input type="email" class="form-control shadow-lg" id="mail"  name="email" placeholder="  input your mail here .." autocomplete="off">
+        </div>
+        <br>
+
+        <div class="col-md-5 ">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control shadow-lg" name="password" id="pw" autocomplete="off ">
+        </div>
+        <br>
+        <br>
+        <button type="submit " class="btn btn-dark rounded-pill " style="padding:3px 30px ; margin-left: 460px; " onclick="return confirm('Apakah data yang anda isi sudah benar?')">submit</button>
+    </form>
+
+
+
+</body>
+
+
+
+<style>
+    /* nav */
+    
+    nav {
+        display: block;
+    }
+    
+    body {
+        background-color: rgb(221, 218, 218);
+    }
+    
+    * {
+        font-family: 'Poppins';
+    }
+    /* nav end */
+    
+    form h3 {
+        margin-top: 70px;
+
+    }
+    
+    form .col-md-5 {
+        margin-left: 400px;
+    }
+    
+    form .col-md-5 input {
+        border-radius: 7px;
+        padding: 7px 0px;
+    }
+    form .col-md-5 label{
+        margin-right: 520px;
+        line-height: 10px;
+    }
+</style>

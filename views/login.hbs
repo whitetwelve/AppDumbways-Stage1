@@ -1,0 +1,75 @@
+
+{{>header}}
+{{>navbar}}
+
+<body>
+        {{!-- alert --}}
+    {{#if messages.warning}}
+    <div class="alert alert-warning" role="alert">
+        {{messages.warning}}
+    </div>
+    {{/if}}
+
+  {{#if messages.success}}
+    <div class="alert alert-success" role="alert" >
+        {{messages.success}}
+        </div>
+          {{/if}}
+
+
+    <form action="/login" method="POST" style="text-align:center">
+        <h3><strong>LOGIN TO YOUR ACCOUNT</strong> </h3>
+        <br>
+        <div class="col-md-5 ">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control shadow-lg" id="exampleFormControlInput1" placeholder="  input your mail here .." autocomplete="off" name="email">
+        </div>
+        <br>
+
+        <div class="col-md-5 ">
+            <label for="pw" class="form-label">Password</label>
+            <input type="password" class="form-control shadow-lg" id="pw" autocomplete="off " name="password">
+        </div>
+        <br>
+        <br>
+        <button type="submit " class="btn btn-dark rounded-pill " style="padding:3px 30px ; margin-left: 460px; ">submit</button>
+    </form>
+</body>
+
+
+
+<style>
+    /* nav */
+    
+    nav {
+        display: block;
+    }
+    
+    body {
+        background-color: rgb(221, 218, 218);
+    }
+    
+    * {
+        font-family: 'Poppins';
+    }
+    /* nav end */
+    
+    form h3 {
+        margin-top: 70px;
+
+    }
+    
+    form .col-md-5 {
+        margin-left: 400px;
+    }
+    
+    form .col-md-5 input {
+        border-radius: 7px;
+        padding: 7px 0px;
+    }
+    form .col-md-5 label{
+        margin-right: 520px;
+        line-height: 10px;
+    }
+</style>
+

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(242, 238, 238);">
+    <img src="/public/img/dw.png" style="width: 4.5%; margin-left: 100px; margin-right: 40px;">
+    <div class="container">
+        <a class="navbar-brand " style="margin-right: 40px;" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="add" style="margin-top:12px;display: block;">Add Project</a>
+                </li>
+         
+                <form class="border-end" style="display:inline ; margin-left: 530px;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        {{#if isLogin}}
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="margin-top:7px;display: block; margin-right: 7px;">Hello, {{user.name}}</a>
+                        </li>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/logout" style="margin-top:7px;display: block;">Logout</a>
+                            </li>
+
+                            {{else}}
+                             <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="register" style="margin-top:7px;display: block; margin-right: 15px;">Register</a>
+                        </li>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="login" style="margin-top:7px;display: block;">Login</a>
+                            </li>
+
+                            {{/if}}
+                                                        <a href="contact" style="text-decoration:none; color:white;">
+                                <button class="btn btn-dark" type="submit" style="border-radius: 10px;margin-left: 14px; margin-top: 4px; padding: 0px 20px;">Contact Me</a></button>
+                            </a>
+                </form>
+</nav>
